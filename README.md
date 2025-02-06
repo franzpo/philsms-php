@@ -100,4 +100,4 @@ This package is licensed under the **MIT License**.
 ## Contact
 
 For any questions or inquiries, please contact
-[jaydoesphp@example.com](mailto:jaydoesphp@gmail.com).
+[jaydoesphp@gmail.com](mailto:jaydoesphp@gmail.com).
