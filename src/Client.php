@@ -4,11 +4,14 @@ namespace Jaydoesphp\PhilsmsPhp;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\RequestException;
 
-class Client
+final class Client
 {
     protected $httpClient;
     protected $apiKey;
-    protected $baseUri = "https://app.philsms.com/api/v3/";
+
+    private $sms;
+    private $profile;
+    private $baseUri = "https://app.philsms.com/api/v3/";
 
     public function __construct($apiKey)
     {
@@ -16,7 +19,10 @@ class Client
             'base_uri' => $this->baseUri,
             'timeout' => 5.0,
         ]);
+
         $this->apiKey = $apiKey;
+        $this->sms = SMS::create($this);
+        $this->profile = Profile::create($this);
     }
 
     public function request($method, $endpoint, $data = [])
@@ -38,5 +44,40 @@ class Client
                 'message' => $e->getMessage()
             ];
         }
+    }
+
+    /**
+     * send sms
+     * 
+     * @param string $recipient
+     * @param string $message
+     * @param string $senderId
+     * @param string $type
+     * 
+     * @return array
+     */
+    public function send($recipient, $message, $senderId = 'PhilSMS', $type = 'plain')
+    {
+        return $this->sms->postOutboundMessage($recipient, $message, $senderId, $type);
+    }
+
+    /**
+     * get profile details
+     * 
+     * @return array
+     */
+    public function profile()
+    {
+        return $this->profile->getProfile();
+    }
+
+    /**
+     * get profile balance
+     * 
+     * @return array
+     */
+    public function balance()
+    {
+        return $this->profile->getBalance();
     }
 }
