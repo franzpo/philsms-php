@@ -49,7 +49,7 @@ final class Client
     /**
      * send sms
      * 
-     * @param string $recipient
+     * @param string|array $recipient
      * @param string $message
      * @param string $senderId
      * @param string $type
