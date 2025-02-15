@@ -1,8 +1,7 @@
-# 📡 PHILSMS PHP
+![jaydoesphpphilsms-php](https://github.com/user-attachments/assets/10cae866-489f-48e0-a9b5-4fb42df30f3d)
+# 📡 philsms api for php
 
-PHILSMS-PHP is a PHP library for sending SMS messages using various SMS gateways
-in the Philippines. Visit [PhilSMS](https://www.philsms.com/) to get your API
-KEY!
+A PHP library for sending SMS messages using PhilSMS. Visit [PhilSMS](https://www.philsms.com/) to get your API key!
 
 ## 🚀 Installation
 
@@ -101,4 +100,4 @@ This package is licensed under the **MIT License**.
 ## Contact
 
 For any questions or inquiries, please contact
-[jaydoesphp@example.com](mailto:jaydoesphp@gmail.com).
+[jaydoesphp@gmail.com](mailto:jaydoesphp@gmail.com).
