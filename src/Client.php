@@ -21,7 +21,7 @@ final class Client
         ]);
 
         $this->apiKey = $apiKey;
-        $this->sms = SMS::create($this);
+        $this->sms = Sms::create($this);
         $this->profile = Profile::create($this);
     }
 
