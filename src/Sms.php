@@ -1,7 +1,7 @@
 <?php
 namespace Jaydoesphp\PhilsmsPhp;
 
-class SMS
+class Sms
 {
     protected $client;
 
