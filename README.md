@@ -1,4 +1,4 @@
-![jaydoesphpphilsms-php](https://github.com/user-attachments/assets/10cae866-489f-48e0-a9b5-4fb42df30f3d)
+
 # 📡 philsms api for php
 
 A PHP library for sending SMS messages using PhilSMS. Visit [PhilSMS](https://www.philsms.com/) to get your API key!
